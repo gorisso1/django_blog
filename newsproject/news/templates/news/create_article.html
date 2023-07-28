@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Написать статью</title>
+</head>
+<body>
+<style>
+        /* Стили для формы ввода */
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .title {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        .content{
+          width: 100%;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+          box-sizing: border-box;
+          height: 100px;
+        }
+
+
+
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+</style>
+
+    <h1 style="text-align: center">Написать статью</h1>
+    <form method="post">
+        {% csrf_token %}
+         <label for="id_post_name">Названия</label>
+        <input type="text" class="title" name="title" required id="id_post_name">
+
+        <label for="id_post_text">Описание</label>
+        <input class="content" type="text" name="content" required id="id_post_text">
+
+        <button type="submit">Сохранить статью</button>
+    </form>
+</body>
+</html>

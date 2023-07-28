@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Регистрация</title>
+    <style>
+        /* Стили для формы ввода */
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Регистрация</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="id_username">Имя пользователя:</label>
+        <input type="text" name="username" required id="id_username">
+
+        <label for="id_password">Пароль:</label>
+        <input type="password" name="password1" required id="id_password">
+        <label for="id_password2">Повторите пароль:</label>
+        <input type="password" name="password2" required id="id_password2">
+
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+</body>
+</html>

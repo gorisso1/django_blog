@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ news_item.title }}</title>
+    <style>
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>{{ news_item.title }}</h1>
+    </div>
+
+    <div class="container">
+        <p>{{ news_item.content }}</p>
+        <p>Дата публикации: {{ news_item.pub_date }}</p>
+    </div>
+</body>
+</html>
